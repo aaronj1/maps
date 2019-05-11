@@ -44,15 +44,13 @@ html, body, #container {
   background-color: #fff0;
   color: #fff;
   border: none;}
-
-.sequencePanel{
-  width: 130px;
-  height: 55px;
-  z-index: 1;
-  position: absolute;
-  bottom: 5%;
-  left: 40%;
-  background-color: #00000087;
+  .sequencePanel {
+   
+    z-index: 1;
+    position: absolute;
+    top: 5%;
+    left: 5px;
+    /* background-color: #00000087; */
 }
 #attribute-legend{
   background-color: #f5f5f5;
@@ -90,8 +88,52 @@ html, body, #container {
   cursor: pointer;
 }
 
-.skip{margin: 10px;}
+.skip{    margin: 8px;
+  font-size: 20px;
+  background-color: #c4c5be;
+  color: #000;}
 
+/*#replay{
+  background-color: #c4c5be;
+  color: #000;
+ 
+}*/
+
+.mapboxgl-ctrl-group {
+
+  border-radius: 4px;
+  overflow: hidden;
+  background: #6c757d;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+}
+
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-zoom-in {
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-image: url(/images/zoom_in.svg);
+  background-position: center;
+}
+
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-zoom-out {
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: center;
+  background-image: url(/images/zoom_out.svg);
+}
+
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-compass > .mapboxgl-ctrl-compass-arrow {
+
+  background-position: center;
+  background-image:  url(/images/compass.svg);
+  background-repeat: no-repeat;
+  display: inline-block;}
+
+.highlight{
+  background-color: #23f3fc;
+  color:#fff;
+}
 .leaflet-bottom {
   margin-bottom: 30px;
 }
@@ -167,7 +209,7 @@ html, body, #container {
   
   @media screen and (min-width: 768px) {
     .page-wrapper.toggled .page-content {
-      padding-right: 260px;
+      padding-right:350px;
     }
   }
   /*----------------show sidebar button----------------*/
@@ -186,12 +228,12 @@ html, body, #container {
   /*----------------sidebar-wrapper----------------*/
   
   .sidebar-wrapper {
-    width: 260px;
+    width: 350px;
     height: 100%;
     max-height: 100%;
     position: fixed;
     top: 0;
-    right: -300px;
+    right: -400px;
     z-index: 999;
   }
   
@@ -239,20 +281,17 @@ html, body, #container {
   /*--------------------sidebar-header----------------------*/
   
   .sidebar-wrapper .sidebar-header {
-    padding: 20px;
     overflow: hidden;
   }
   
-  .sidebar-wrapper .sidebar-header .user-pic {
+  .sidebar-wrapper .sidebar-header .loc-pic {
     float: right;
-    width: 60px;
-    padding: 2px;
+    width: 100%;
     border-radius: 12px;
-    margin-right: 15px;
     overflow: hidden;
   }
   
-  .sidebar-wrapper .sidebar-header .user-pic img {
+  .sidebar-wrapper .sidebar-header .loc-pic img {
     object-fit: cover;
     height: 100%;
     width: 100%;
@@ -266,7 +305,7 @@ html, body, #container {
   
   .sidebar-wrapper .sidebar-menu .header-menu span {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 20px;
     padding: 10px 10px 5px 10px;
     display: inline-block;
   }
@@ -476,7 +515,7 @@ html, body, #container {
   }
   
   .chiller-theme .sidebar-wrapper .sidebar-menu .header-menu span {
-      color: #6c7b88;
+      color: #fff;
   }
   
   .chiller-theme .sidebar-footer {
@@ -494,21 +533,13 @@ html, body, #container {
   }
   /*----------layer button----------------*/
   #menu {
-    background: #fff;
-    position: absolute;
+    /*position: absolute;*/
     z-index: 1;
-    top: 10px;
-    left: 10px;
-    border-radius: 3px;
-   
-    width: 120px;
-    border: 1px solid rgba(0,0,0,0.4);
-    font-family: 'Open Sans', sans-serif;
     }
      
     #menu a {
     font-size: 13px;
-    color: #404040;
+    color: #fff;
     display: block;
     margin: 0;
     padding: 0;
@@ -522,10 +553,10 @@ html, body, #container {
     border: none;
     }
      
-    #menu a:hover {
+   /* #menu a:hover {
     background-color: #f8f8f8;
     color: #404040;
-    }
+    }*/
      
     #menu a.active {
     background-color: #6c757d;
@@ -541,14 +572,16 @@ html, body, #container {
       z-index: 1;
       position: absolute;
       width: 250px;
-      top: 10%;
-      left: 0.5%;
+      top: 5%;
+      box-shadow: 1px 2px 3px 4px #cccccca1;
+      left: 85px;
+      background-color: rgb(221, 254, 255);
     }
 
     #buttonweather{
       z-index: 9;
-      position: absolute;
-      bottom: 140px;
+      /*position: absolute;
+      bottom: 140px;*/
       left: 0.5%;
 
     }
@@ -603,3 +636,24 @@ html, body, #container {
     .overlay button:hover {
     background-color:#4ea0da;
     }
+
+
+
+ /*------------panel menu------------*/
+
+ .pannelMenu {
+   list-style-type: none;
+   /* margin: 3px; */
+   padding-left: 11px;
+  }
+
+  .pannelMenu li{
+    padding-bottom: 3px;
+  }
+
+
+ .btnMenu{width: 42px;
+  height: 38px;
+  border: 1px solid #ddd;
+
+} 
